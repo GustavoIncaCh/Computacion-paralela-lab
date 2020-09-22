@@ -1,0 +1,118 @@
+==8191== Memcheck, a memory error detector
+==8191== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==8191== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==8191== Command: ./bloque.out
+==8191== Parent PID: 4764
+==8191==
+--8191--
+--8191-- Valgrind options:
+--8191--    --leak-check=full
+--8191--    --show-leak-kinds=all
+--8191--    --track-origins=yes
+--8191--    --verbose
+--8191--    --log-file=valgrind-out.txt
+--8191-- Contents of /proc/version:
+--8191--   Linux version 4.4.0-165-generic (buildd@lgw01-amd64-027) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ) #193-Ubuntu SMP Tue Sep 17 17:42:52 UTC 2019
+--8191--
+--8191-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--8191-- Page sizes: currently 4096, max supported 4096
+--8191-- Valgrind library directory: /usr/lib/valgrind
+--8191-- Reading syms from /home/naniwa/Escritorio/Pc/bloque.out
+--8191-- Reading syms from /lib/x86_64-linux-gnu/ld-2.23.so
+--8191--   Considering /lib/x86_64-linux-gnu/ld-2.23.so ..
+--8191--   .. CRC mismatch (computed 10d8ea02 wanted 4fdda1aa)
+--8191--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.23.so ..
+--8191--   .. CRC is valid
+--8191-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--8191--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--8191--   .. CRC mismatch (computed eea41ea9 wanted 2009db78)
+--8191--    object doesn't have a symbol table
+--8191--    object doesn't have a dynamic symbol table
+--8191-- Scheduler: using generic scheduler lock implementation.
+--8191-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==8191== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-8191-by-naniwa-on-???
+==8191== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-8191-by-naniwa-on-???
+==8191== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-8191-by-naniwa-on-???
+==8191==
+==8191== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==8191== don't want to do, unless you know exactly what you're doing,
+==8191== or are doing some strange experiment):
+==8191==   /usr/lib/valgrind/../../bin/vgdb --pid=8191 ...command...
+==8191==
+==8191== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==8191==   /path/to/gdb ./bloque.out
+==8191== and then give GDB the following command
+==8191==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=8191
+==8191== --pid is optional if only one valgrind process is running
+==8191==
+--8191-- REDIR: 0x401cf10 (ld-linux-x86-64.so.2:strlen) redirected to 0x3809e181 (???)
+--8191-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--8191--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--8191--   .. CRC mismatch (computed 2567ccf6 wanted 49420590)
+--8191--    object doesn't have a symbol table
+--8191-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--8191--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--8191--   .. CRC mismatch (computed 0e27c9a8 wanted ac585421)
+--8191--    object doesn't have a symbol table
+==8191== WARNING: new redirection conflicts with existing -- ignoring it
+--8191--     old: 0x0401cf10 (strlen              ) R-> (0000.0) 0x3809e181 ???
+--8191--     new: 0x0401cf10 (strlen              ) R-> (2007.0) 0x04c31020 strlen
+--8191-- REDIR: 0x401b860 (ld-linux-x86-64.so.2:index) redirected to 0x4c30bc0 (index)
+--8191-- REDIR: 0x401ba80 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c320d0 (strcmp)
+--8191-- REDIR: 0x401dc70 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c35270 (mempcpy)
+--8191-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+--8191--   Considering /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21 ..
+--8191--   .. CRC mismatch (computed eb112249 wanted d0509bc9)
+--8191--    object doesn't have a symbol table
+--8191-- Reading syms from /lib/x86_64-linux-gnu/libc-2.23.so
+--8191--   Considering /lib/x86_64-linux-gnu/libc-2.23.so ..
+--8191--   .. CRC mismatch (computed 10016417 wanted 1f868c97)
+--8191--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.23.so ..
+--8191--   .. CRC is valid
+--8191-- Reading syms from /lib/x86_64-linux-gnu/libm-2.23.so
+--8191--   Considering /lib/x86_64-linux-gnu/libm-2.23.so ..
+--8191--   .. CRC mismatch (computed d1bcd7c2 wanted c6824701)
+--8191--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.23.so ..
+--8191--   .. CRC is valid
+--8191-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--8191--   Considering /lib/x86_64-linux-gnu/libgcc_s.so.1 ..
+--8191--   .. CRC mismatch (computed b9a68419 wanted 29d51b00)
+--8191--    object doesn't have a symbol table
+--8191-- REDIR: 0x524ba00 (libc.so.6:strcasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8191-- REDIR: 0x5247280 (libc.so.6:strcspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8191-- REDIR: 0x524dcf0 (libc.so.6:strncasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8191-- REDIR: 0x52496f0 (libc.so.6:strpbrk) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8191-- REDIR: 0x5249a80 (libc.so.6:strspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8191-- REDIR: 0x524b14b (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8191-- REDIR: 0x5249400 (libc.so.6:rindex) redirected to 0x4c308a0 (rindex)
+--8191-- REDIR: 0x5240130 (libc.so.6:malloc) redirected to 0x4c2db20 (malloc)
+--8191-- REDIR: 0x5247720 (libc.so.6:strlen) redirected to 0x4c30f60 (strlen)
+--8191-- REDIR: 0x524abf0 (libc.so.6:__GI_memcmp) redirected to 0x4c33b90 (__GI_memcmp)
+--8191-- REDIR: 0x5245cd0 (libc.so.6:strcmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--8191-- REDIR: 0x525b570 (libc.so.6:__strcmp_sse2_unaligned) redirected to 0x4c31f90 (strcmp)
+--8191-- REDIR: 0x52404f0 (libc.so.6:free) redirected to 0x4c2ed80 (free)
+==8191==
+==8191== HEAP SUMMARY:
+==8191==     in use at exit: 72,704 bytes in 1 blocks
+==8191==   total heap usage: 1 allocs, 0 frees, 72,704 bytes allocated
+==8191==
+==8191== Searching for pointers to 1 not-freed blocks
+==8191== Checked 107,464 bytes
+==8191==
+==8191== 72,704 bytes in 1 blocks are still reachable in loss record 1 of 1
+==8191==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8191==    by 0x4EC3EFF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==8191==    by 0x40106C9: call_init.part.0 (dl-init.c:72)
+==8191==    by 0x40107DA: call_init (dl-init.c:30)
+==8191==    by 0x40107DA: _dl_init (dl-init.c:120)
+==8191==    by 0x4000C69: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+==8191==
+==8191== LEAK SUMMARY:
+==8191==    definitely lost: 0 bytes in 0 blocks
+==8191==    indirectly lost: 0 bytes in 0 blocks
+==8191==      possibly lost: 0 bytes in 0 blocks
+==8191==    still reachable: 72,704 bytes in 1 blocks
+==8191==         suppressed: 0 bytes in 0 blocks
+==8191==
+==8191== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==8191== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
